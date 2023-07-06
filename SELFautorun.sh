@@ -6,9 +6,11 @@ batchsize=("10" "25" "50")  # Replace with your desired numbers
 
 cd  ~/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 for number in ${batchsize[@]}; do
+    echo 'Starting with '${batchsize[@]}''
     sed -i "6 s/\[ [0-9]* \]/[ $number ]/g" "$config" 
     echo -e 'Preferred Batch size: '${batchsize[@]}' \n' >> output.txt
     cmsRun run.py maxEvents=1000 threads=4 device=gpu tmi=True  &> tempoutput.txt | sed -n '/TimeReport>/,/^Mem/ { /^Key/ d; p; }' >> output.txt
    
     echo -e ' \n\n\n' >> output.txt
+    echo 'Done with '${batchsize[@]}''
 done
