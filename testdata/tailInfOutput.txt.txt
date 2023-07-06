@@ -1,0 +1,50 @@
+TimeReport   0.000014     0.000014     0.000014  tauGenJets
+TimeReport   0.000008     0.000008     0.000008  tauGenJetsBoosted
+TimeReport   0.000005     0.000005     0.000005  tauGenJetsSelectorAllHadrons
+TimeReport   0.000003     0.000003     0.000003  tauGenJetsSelectorAllHadronsBoosted
+TimeReport   0.000045     0.000045     0.000045  tauMatch
+TimeReport   0.000025     0.000025     0.000025  tauMatchBoosted
+TimeReport   0.000139     0.000139     0.000139  tmpPFCandCollPtrNoHF
+TimeReport   0.000015     0.000015     0.000015  toomanystripclus53X
+TimeReport   0.000049     0.000049     0.000049  updatedPatJetsSlimmedAK8DeepTags
+TimeReport   0.000245     0.000245     0.000245  updatedPatJetsSlimmedDeepFlavour
+TimeReport   0.000134     0.000134     0.000134  updatedPatJetsSlimmedPuppiWithDeepTags
+TimeReport   0.000166     0.000166     0.000166  updatedPatJetsTransientCorrectedSlimmedAK8DeepTags
+TimeReport   0.000346     0.000346     0.000346  updatedPatJetsTransientCorrectedSlimmedDeepFlavour
+TimeReport   0.000239     0.000239     0.000239  updatedPatJetsTransientCorrectedSlimmedPuppiWithDeepTags
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+TimeReport> Time report complete in 614.624 seconds
+ Time Summary:
+ - Min event:   0.15845
+ - Max event:   16.551
+ - Avg event:   0.644929
+ - Total loop:  345.002
+ - Total init:  269.527
+ - Total job:   614.624
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 2.89853 ev/s
+ CPU Summary:
+ - Total loop:     624.686
+ - Total init:     41.8011
+ - Total extra:    0
+ - Total children: 1.23
+ - Total job:      666.53
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8552.16 Mbytes
+ Key events increasing vsize:
+[30] run: 1 lumi: 68897 event: 68896032  vsize = 8082.14 deltaVsize = 28 rss = 1880.38 delta = 47.375
+[167] run: 1 lumi: 68897 event: 68896141  vsize = 8156.16 deltaVsize = 32 rss = 1985.76 delta = 105.379
+[900] run: 1 lumi: 68897 event: 68896905  vsize = 8552.16 deltaVsize = 368 rss = 2369.7 delta = 383.941
+[0] run: 0 lumi: 0 event: 0  vsize = 0 deltaVsize = 0 rss = 0 delta = 0
+[0] run: 0 lumi: 0 event: 0  vsize = 0 deltaVsize = 0 rss = 0 delta = 0
+[902] run: 1 lumi: 68897 event: 68896908  vsize = 8552.16 deltaVsize = 0 rss = 2372.91 delta = 3.20703
+[901] run: 1 lumi: 68897 event: 68896898  vsize = 8552.16 deltaVsize = 0 rss = 2369.7 delta = 0
+[900] run: 1 lumi: 68897 event: 68896905  vsize = 8552.16 deltaVsize = 368 rss = 2369.7 delta = 393.902
