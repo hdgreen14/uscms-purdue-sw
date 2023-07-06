@@ -4,6 +4,9 @@ config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton
 
 batchsize=("10" "25" "50")  # Replace with your desired numbers
 
+rm tempoutput.txt
+rm output.txt
+
 cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 for number in ${batchsize[@]}; do
     echo 'Starting with '${number}''
