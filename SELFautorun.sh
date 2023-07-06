@@ -4,7 +4,7 @@ config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton
 
 batchsize=("10" "25" "50")  # Replace with your desired numbers
 
-cd  ~/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
+cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 for number in ${batchsize[@]}; do
     echo 'Starting with '${batchsize[@]}''
     sed -i "6 s/\[ [0-9]* \]/[ $number ]/g" "$config" 
