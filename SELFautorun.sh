@@ -8,8 +8,8 @@ events=1000
 config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
 #defaults
 
-$startdir=$PWD
-$startname="output.txt" 
+#$startdir=$PWD
+startname="output.txt" 
 
 help(){
     echo "autoRun [options]"
@@ -40,24 +40,21 @@ r)
 batchloop="$OPTARG"
 ;;
 o)
-$startdir="$OPTARG"
-
+startname="$OPTARG"
 ;;
 esac
 done
 
-if [[-f $startdir]]; then
-    echo "WARNING: A file will be overwritten. Do you want to proceed?"
-    read -p "Are you sure? " -n 1 -r
-    echo    # (optional) move to a new line
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        rm $startdir
-    fi
-fi
-
-if [[-f output.txt]]; then
-    rm output.txt
-fi
+if [ -f $startname ]; then
+   # echo "WARNING: A file will be overwritten."
+#    read -p "Are you sure? " -n 1 -r
+#    echo    # (optional) move to a new line
+ #   if [[ $REPLY =~ ^[Yy]$ ]]; then
+        rm "$startname"
+ #   fi
+else
+    touch "$startname"
+fi 
 
 cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 source /cvmfs/cms.cern.ch/cmsset_default.sh
@@ -72,7 +69,7 @@ for number in ${batchsize[@]}; do
         echo 'Starting with '${number}', run '$i'/'$batchloop''
        echo -e 'Preferred Batch size: '${number}' || Run '$i' of '$batchloop' \n' >> output.txt
         cmsRun run.py maxEvents=${events} threads=4 device=gpu tmi=True 2>&1| tee tempoutput.txt #the 2>&1 redirects stderr (which has TimeReport) to stdout
-        sed -n '/TimeReport>/,/^Mem/ { /^Key/ d; p; }' tempoutput.txt >> $startdir
+        sed -n '/TimeReport>/,/^Mem/ { /^Key/ d; p; }' tempoutput.txt >> $startname
         echo "loop '$i' of '$batchloop'"
     done
     echo -e ' \n\n\n' >> output.txt
