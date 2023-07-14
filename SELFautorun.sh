@@ -3,12 +3,10 @@
 
 #defaults
 batchloop=1
-batchsize=(10)
+batchsize=10
 events=1000
 config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
 cpu=0
-
-#$startdir=$PWD
 startname="output.txt" 
 
 help(){
@@ -69,25 +67,29 @@ fi
 cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
-
-for number in ${batchsize[@]}; do
-    sed -i "6 s/\[ [0-9]* \]/[ $number ]/g" "$config" #changes the config line from [x] to [batchsize]
+echo -e 'Config: \n Cpu: '$cpu' \n '
+    sed -i "5 s/\[ [0-9]* \]/[ "$batchsize" ]/g" "$config" #changes the config line from [x] to [batchsize]
+    awk 'NR==5' $config >> $startname
    #sed -i (edit the current config file instead of making a copy)
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
     for ((i = 1; i <= $batchloop; i++)); do
         echo 'Starting with '${number}', run '$i'/'$batchloop''
         echo -e 'Preferred Batch size: '${number}' || Run '$i' of '$batchloop' \n' >> $startname
-
+        awk 'NR==6' $config >> $startname
         if [[ $cpu == 1 ]]; then
-                cmsRun run.py maxEvents=${events} threads=4 device=cpu tmi=True 2>&1 | tee tempoutput.txt #
+
+            echo "----- Running with CPU ----- " 
+            cmsRun run.py maxEvents=${events} threads=4 device=cpu tmi=True 2>&1 | tee tempoutput.txt 
+
+
         else
         cmsRun run.py maxEvents=${events} threads=4 device=gpu tmi=True 2>&1 | tee tempoutput.txt #the 2>&1 redirects stderr (which has TimeReport) to stdout
         fi
         
         sed -n '/TimeReport>/,/^Mem/ { /^Key/ d; p; }' tempoutput.txt >> $startname
         echo "loop '$i' of '$batchloop'"
-    done
+    
     echo -e ' \n\n\n' >> $startname
     echo 'Done with '${number}''
 
