@@ -1,0 +1,171 @@
+TimeReport> Time report complete in 308.871 seconds
+ Time Summary:
+ - Min event:   0.170402
+ - Max event:   13.0848
+ - Avg event:   0.65132
+ - Total loop:  192.605
+ - Total init:  116.239
+ - Total job:   308.871
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.19198 ev/s
+ CPU Summary:
+ - Total loop:     647.96
+ - Total init:     42.1237
+ - Total extra:    0
+ - Total children: 0.975009
+ - Total job:      690.11
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8706.66 Mbytes
+Preferred Batch size: 10 || Run 2 of 10
+
+TimeReport> Time report complete in 306.768 seconds
+ Time Summary:
+ - Min event:   0.12631
+ - Max event:   13.9144
+ - Avg event:   0.667508
+ - Total loop:  199.89
+ - Total init:  106.844
+ - Total job:   306.768
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.00276 ev/s
+ CPU Summary:
+ - Total loop:     651.832
+ - Total init:     40.3526
+ - Total extra:    0
+ - Total children: 0.99482
+ - Total job:      692.213
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8544.66 Mbytes
+Preferred Batch size: 10 || Run 3 of 10
+
+TimeReport> Time report complete in 293.784 seconds
+ Time Summary:
+ - Min event:   0.147888
+ - Max event:   13.3915
+ - Avg event:   0.626828
+ - Total loop:  186.019
+ - Total init:  107.739
+ - Total job:   293.784
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.37579 ev/s
+ CPU Summary:
+ - Total loop:     630.33
+ - Total init:     40.203
+ - Total extra:    0
+ - Total children: 0.98757
+ - Total job:      670.559
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8759.66 Mbytes
+Preferred Batch size: 10 || Run 4 of 10
+
+TimeReport> Time report complete in 303.612 seconds
+ Time Summary:
+ - Min event:   0.184152
+ - Max event:   14.4837
+ - Avg event:   0.661533
+ - Total loop:  195.787
+ - Total init:  107.801
+ - Total job:   303.612
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.1076 ev/s
+ CPU Summary:
+ - Total loop:     645.167
+ - Total init:     40.7668
+ - Total extra:    0
+ - Total children: 1.05983
+ - Total job:      685.957
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8551.9 Mbytes
+Preferred Batch size: 10 || Run 5 of 10
+
+TimeReport> Time report complete in 301.98 seconds
+ Time Summary:
+ - Min event:   0.136001
+ - Max event:   13.2413
+ - Avg event:   0.638014
+ - Total loop:  189.325
+ - Total init:  112.629
+ - Total job:   301.98
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.28191 ev/s
+ CPU Summary:
+ - Total loop:     637.1
+ - Total init:     40.8819
+ - Total extra:    0
+ - Total children: 1.00602
+ - Total job:      678.009
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8758.91 Mbytes
+Preferred Batch size: 10 || Run 6 of 10
+
+TimeReport> Time report complete in 293.237 seconds
+ Time Summary:
+ - Min event:   0.154105
+ - Max event:   12.4057
+ - Avg event:   0.637785
+ - Total loop:  191.162
+ - Total init:  102.044
+ - Total job:   293.237
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.23116 ev/s
+ CPU Summary:
+ - Total loop:     641.02
+ - Total init:     40.0715
+ - Total extra:    0
+ - Total children: 0.923466
+ - Total job:      681.118
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
+
+MemoryReport> Peak virtual size 8797.9 Mbytes
+Preferred Batch size: 10 || Run 7 of 10
+
+TimeReport> Time report complete in 288.058 seconds
+ Time Summary:
+ - Min event:   0.12563
+ - Max event:   11.8692
+ - Avg event:   0.628218
+ - Total loop:  184.86
+ - Total init:  103.172
+ - Total job:   288.058
+ - EventSetup Lock: 0
+ - EventSetup Get:  0
+ Event Throughput: 5.4095 ev/s
+ CPU Summary:
+ - Total loop:     631.354
+ - Total init:     39.6715
+ - Total extra:    0
+ - Total children: 0.942228
+ - Total job:      671.049
+ Processing Summary:
+ - Number of Events:  1000
+ - Number of Global Begin Lumi Calls:  1
+ - Number of Global Begin Run Calls: 1
