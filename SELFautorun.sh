@@ -15,16 +15,17 @@ help(){
 	echo "Options:"
 	echo "-b          Choose preferred batch size (Default: 10)"
     echo "-c          Run with CPU (default: GPU)"
-    echo "-e          Choose how many events per inference (Default: 1000)" #when implimenting, add something to check config's max batch size
+    echo "-e          Choose how many events per inference (Default: 1000)" #when implementing, add something to check config's max batch size
     #and then probably output, like, WARNING: max events is less than desired events 
     echo "-h          Print this message and exit"
+    echo "-i          Change ip connection in run.py file"
 	#echo "-d [dir]    Directory containing run.py"
 	echo "-r          Number of runs per batch size"
     echo "-o [name]   Choose output file for time report data (default: PWD/output.txt)"
    # echo "-s"         Show output
 	exit $1
 }
-while getopts "b:cd:e:hr:o:s" opt; do
+while getopts "b:cd:e:hi:r:o:s" opt; do
 case "$opt" in
 b)
 batchsize="$OPTARG"
@@ -51,7 +52,7 @@ if [ -f "$startname" ]; then
    # echo "WARNING: A file will be overwritten."
 #    read -p "Are you sure? " -n 1 -r
 #    echo    # (optional) move to a new line
- #   if [[ $REPLY =~ ^[Yy]$ ]]; then
+#   if [[ $REPLY =~ ^[Yy]$ ]]; then
         rm "$startname"
  #   fi
 else
@@ -76,7 +77,6 @@ echo -e 'Config: \n Cpu: '$cpu' \n '
     for ((i = 1; i <= $batchloop; i++)); do
         echo 'Starting with '${number}', run '$i'/'$batchloop''
         echo -e 'Preferred Batch size: '${number}' || Run '$i' of '$batchloop' \n' >> $startname
-        awk 'NR==6' $config >> $startname
         if [[ $cpu == 1 ]]; then
 
             echo "----- Running with CPU ----- " 
