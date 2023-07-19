@@ -8,6 +8,7 @@ events=1000
 config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
 cpu=0
 startname="output.txt" 
+deepmet=1
 
 help(){
     echo "autoRun [options]"
@@ -19,13 +20,14 @@ help(){
     #and then probably output, like, WARNING: max events is less than desired events 
     echo "-h          Print this message and exit"
     echo "-i          Change ip connection in run.py file"
+    echo "-p          Using a PN Model (default: Deepmet)"
 	#echo "-d [dir]    Directory containing run.py"
 	echo "-r          Number of runs per batch size"
     echo "-o [name]   Choose output file for time report data (default: PWD/output.txt)"
    # echo "-s"         Show output
 	exit $1
 }
-while getopts "b:cd:e:hi:r:o:s" opt; do
+while getopts "b:cd:e:hi:pr:o:s" opt; do
 case "$opt" in
 b)
 batchsize="$OPTARG"
@@ -41,6 +43,9 @@ help 0
 ;;
 r)
 batchloop="$OPTARG"
+;;
+p)
+deepmet=0
 ;;
 o)
 startname="$OPTARG"
@@ -69,7 +74,13 @@ cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 echo -e 'Config: \n Cpu: '$cpu' \n '
+    if [[$deepmet == 0]]; then
     sed -i "5 s/\[ [0-9]* \]/[ "$batchsize" ]/g" "$config" #changes the config line from [x] to [batchsize]
+    else
+    sed -i 's/\(batch_size:\s*\)[0-9]*/\1'$batchsize'/' "$config" #ty chatgpt
+    #basically this says, capture 'batch_size: [any characters until the digits] in a group, which we can access later using \1.'
+    #then, sub it with that group and the batchsize. and as per usual, edit it with config
+    fi
     awk 'NR==5' $config >> $startname
    #sed -i (edit the current config file instead of making a copy)
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
