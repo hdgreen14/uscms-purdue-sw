@@ -5,7 +5,8 @@
 batchloop=1
 batchsize=10
 events=1000
-config="/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
+config="/depot/cms/purdue-af/triton/models-hannah/deepmet/config.pbtxt"
+#"/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
 cpu=0
 startname="output.txt" 
 deepmet=1
@@ -74,20 +75,19 @@ cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 echo -e 'Config: \n Cpu: '$cpu' \n '
-    if [[$deepmet == 0]]; then
+    if [[ $deepmet == 0 ]]; then
     sed -i "5 s/\[ [0-9]* \]/[ "$batchsize" ]/g" "$config" #changes the config line from [x] to [batchsize]
     else
     sed -i 's/\(batch_size:\s*\)[0-9]*/\1'$batchsize'/' "$config" #ty chatgpt
     #basically this says, capture 'batch_size: [any characters until the digits] in a group, which we can access later using \1.'
     #then, sub it with that group and the batchsize. and as per usual, edit it with config
     fi
-    awk 'NR==5' $config >> $startname
    #sed -i (edit the current config file instead of making a copy)
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
     for ((i = 1; i <= $batchloop; i++)); do
-        echo 'Starting with '${number}', run '$i'/'$batchloop''
-        echo -e 'Preferred Batch size: '${number}' || Run '$i' of '$batchloop' \n' >> $startname
+        echo 'Starting with '${batchsize}', run '$i'/'$batchloop''
+        echo -e 'Preferred Batch size: '${batchsize}' || Run '$i' of '$batchloop' \n' >> $startname
         if [[ $cpu == 1 ]]; then
 
             echo "----- Running with CPU ----- " 
@@ -102,7 +102,7 @@ echo -e 'Config: \n Cpu: '$cpu' \n '
         echo "loop '$i' of '$batchloop'"
     
     echo -e ' \n\n\n' >> $startname
-    echo 'Done with '${number}''
+    echo 'Done with '${batchsize}''
 
     rm tempoutput.txt
 
