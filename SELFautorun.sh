@@ -3,13 +3,14 @@
 
 #defaults
 batchloop=1
-batchsize=10
+batchsize=(10)
 events=1000
 config="/depot/cms/purdue-af/triton/models-hannah/deepmet/config.pbtxt"
 #"/home/green642/sonic/CMSSW_12_5_0_pre4/src/HeterogeneousCore/SonicTriton/data/models/particlenet_AK4_PT/config.pbtxt"  # Replace with your file name
 cpu=0
 startname="output.txt" 
 deepmet=1
+ip=""
 
 help(){
     echo "autoRun [options]"
@@ -42,6 +43,9 @@ events="$OPTARG"
 h)
 help 0
 ;;
+i)
+ip="$OPTARG"
+;;
 r)
 batchloop="$OPTARG"
 ;;
@@ -54,22 +58,31 @@ startname="$OPTARG"
 esac
 done
 
-if [ -f "$startname" ]; then
+
+
+#if [ -f "$startname" ]; then
    # echo "WARNING: A file will be overwritten."
 #    read -p "Are you sure? " -n 1 -r
 #    echo    # (optional) move to a new line
 #   if [[ $REPLY =~ ^[Yy]$ ]]; then
-        rm "$startname"
+#        rm "$startname"
  #   fi
-else
-    touch "$startname"
-fi 
+#else
+#    touch "$startname"
+#fi 
 
-if [ -f "$startname" ]; then
+if [[ -f "tempoutput.txt" ]]; then
 rm tempoutput.txt
 else   
     touch tempoutput.txt
 fi
+
+
+#set ip address
+    if [[ ! -z $ip ]]; then
+        sed -i 's/\(options.register("address", "\)[^"]*/\1'$ip'/' run.py
+    fi
+
 
 cd  /home/green642/sonic/CMSSW_12_5_0_pre4/src/sonic-workflows
 source /cvmfs/cms.cern.ch/cmsset_default.sh
@@ -82,10 +95,13 @@ echo -e 'Config: \n Cpu: '$cpu' \n '
     #basically this says, capture 'batch_size: [any characters until the digits] in a group, which we can access later using \1.'
     #then, sub it with that group and the batchsize. and as per usual, edit it with config
     fi
-   #sed -i (edit the current config file instead of making a copy)
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
+
+
+
     for ((i = 1; i <= $batchloop; i++)); do
+        echo -e 'run started on:' %date%_%time%
         echo 'Starting with '${batchsize}', run '$i'/'$batchloop''
         echo -e 'Preferred Batch size: '${batchsize}' || Run '$i' of '$batchloop' \n' >> $startname
         if [[ $cpu == 1 ]]; then
