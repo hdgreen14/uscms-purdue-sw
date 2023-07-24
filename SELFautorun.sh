@@ -103,7 +103,7 @@ tim=$(date +"%T")
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
     for ((i = 1; i <= $batchloop; i++)); do
-        echo 'Starting with '$b', run '$i'/'$batchloop' on '$dat' at start time: '$tim'' | tee -a $startname; #print time, date to file
+        echo 'Starting with '$batchsize', run '$i'/'$batchloop' on '$dat' at start time: '$tim'' | tee -a $startname; #print time, date to file
         echo -e 'Preferred Batch size: '$b' || Run '$i' of '$batchloop' \n' >> $startname
         if [[ $cpu == 1 ]]; then
 
