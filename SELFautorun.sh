@@ -3,7 +3,7 @@
 
 #defaults
 batchloop=1
-batchsize=(10)
+batchsize=()
 events=1000
 config="/depot/cms/purdue-af/triton/models-hannah/deepmet/config.pbtxt"
 #"/home/green642/temp/deepmet/config.pbtxt
@@ -33,7 +33,7 @@ help(){
 while getopts "b:cd:e:hi:pr:o:s" opt; do
 case "$opt" in
 b)
-batchsize="$OPTARG"
+batchsize+="$OPTARG"
 ;;
 c)
 cpu=1
@@ -69,6 +69,10 @@ else
     touch tempoutput.txt
 fi
 
+#sets batchsize default if needed
+if [[  ${#batchsize[@]} -eq 0  ]]; then
+    batchsize+=10
+fi
 
 #set ip address
     if [[ ! -z $ip ]]; then
@@ -98,9 +102,6 @@ tim=$(date +"%T")
     fi
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
-
-
-
     for ((i = 1; i <= $batchloop; i++)); do
         echo 'Starting with '$b', run '$i'/'$batchloop' on '$dat' at start time: '$tim'' | tee -a $startname; #print time, date to file
         echo -e 'Preferred Batch size: '$b' || Run '$i' of '$batchloop' \n' >> $startname
@@ -118,7 +119,7 @@ tim=$(date +"%T")
         echo "loop '$i' of '$batchloop'"
     
     echo -e ' \n\n\n' >> $startname
-    echo 'Done with '${batchsize}''
+    echo 'Done with '$b', run end at '; date +"%T"
 
     rm tempoutput.txt
 
