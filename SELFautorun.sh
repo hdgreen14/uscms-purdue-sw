@@ -15,11 +15,11 @@ ip=""
 
 help(){
     echo "autoRun [options]"
-	echo 
 	echo "Options:"
 	echo "-b          Choose preferred batch size (Default: 10)"
     echo "-c          Run with CPU (default: GPU)"
     echo "-e          Choose how many events per inference (Default: 1000)" #when implementing, add something to check config's max batch size
+    echo "-f          Choose config file to write batchsize into (not implemented yet)"
     #and then probably output, like, WARNING: max events is less than desired events 
     echo "-h          Print this message and exit"
     echo "-i          Change ip connection in run.py file"
@@ -30,7 +30,7 @@ help(){
    # echo "-s"         Show output
 	exit $1
 }
-while getopts "b:cd:e:hi:pr:o:s" opt; do
+while getopts "b:cd:e:f:hi:pr:o:s" opt; do
 case "$opt" in
 b)
 batchsize+="$OPTARG"
@@ -40,6 +40,9 @@ cpu=1
 ;;
 e)
 events="$OPTARG"
+;;
+f)
+config="$OPTARG"
 ;;
 h)
 help 0
@@ -90,8 +93,6 @@ source /cvmfs/cms.cern.ch/cmsset_default.sh
 cmsenv
 echo -e 'Config: \n Cpu: '$cpu' \n '
 
-dat=$(date -I)
-tim=$(date +"%T") 
 #for b in ${batchsize[@]}; do
     if [[ $deepmet == 0 ]]; then
     sed -i "5 s/\[ [0-9]* \]/[ "$batchsize" ]/g" "$config" #changes the config line from [x] to [batchsize]
@@ -103,6 +104,9 @@ tim=$(date +"%T")
    #"line 6,  substitute/ [ 1 or more 0-9 digits ]/number/global"
    #global as in, do it for everything on the line. might not need this.
     for ((i = 1; i <= $batchloop; i++)); do
+    
+        dat=$(date -I)
+        tim=$(date +"%T") 
         echo 'Starting with '$batchsize', run '$i'/'$batchloop' on '$dat' at start time: '$tim'' | tee -a $startname; #print time, date to file
         echo -e 'Preferred Batch size: '$b' || Run '$i' of '$batchloop' \n' >> $startname
         if [[ $cpu == 1 ]]; then
