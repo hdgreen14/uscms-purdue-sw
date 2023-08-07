@@ -1,0 +1,270 @@
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 345
+    Throughput: 575 infer/sec
+    p50 latency: 697292 usec
+    p90 latency: 779136 usec
+    p95 latency: 793116 usec
+    p99 latency: 820217 usec
+    Avg gRPC time: 696688 usec ((un)marshal request/response 4235 usec + response wait 692453 usec)
+  Server:
+    Inference count: 41300
+    Execution count: 413
+    Successful request count: 413
+    Avg request latency: 544169 usec (overhead 631 usec + queue 196297 usec + compute input 11466 usec + compute infer 335547 usec + compute output 228 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 575 infer/sec, latency 793116 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+
+  Client:
+    Request count: 351
+    Throughput: 585 infer/sec
+    p50 latency: 690087 usec
+    p90 latency: 760979 usec
+    p95 latency: 776872 usec
+    p99 latency: 804892 usec
+    Avg gRPC time: 682765 usec ((un)marshal request/response 3951 usec + response wait 678814 usec)
+  Server:
+    Inference count: 42300
+    Execution count: 423
+    Successful request count: 423
+    Avg request latency: 534718 usec (overhead 688 usec + queue 193556 usec + compute input 9845 usec + compute infer 330430 usec + compute output 199 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 585 infer/sec, latency 776872 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 349
+    Throughput: 581.667 infer/sec
+    p50 latency: 692957 usec
+    p90 latency: 772001 usec
+    p95 latency: 787363 usec
+    p99 latency: 817601 usec
+    Avg gRPC time: 688771 usec ((un)marshal request/response 4063 usec + response wait 684708 usec)
+  Server:
+    Inference count: 41800
+    Execution count: 418
+    Successful request count: 418
+    Avg request latency: 564923 usec (overhead 725 usec + queue 220593 usec + compute input 12176 usec + compute infer 331216 usec + compute output 213 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 581.667 infer/sec, latency 787363 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 348
+    Throughput: 580 infer/sec
+    p50 latency: 507814 usec
+    p90 latency: 594402 usec
+    p95 latency: 605441 usec
+    p99 latency: 645920 usec
+    Avg gRPC time: 516868 usec ((un)marshal request/response 4082 usec + response wait 512786 usec)
+  Server:
+    Inference count: 41800
+    Execution count: 418
+    Successful request count: 418
+    Avg request latency: 382880 usec (overhead 747 usec + queue 48963 usec + compute input 9158 usec + compute infer 323798 usec + compute output 214 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 580 infer/sec, latency 605441 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 352
+    Throughput: 586.667 infer/sec
+    p50 latency: 690392 usec
+    p90 latency: 750323 usec
+    p95 latency: 781951 usec
+    p99 latency: 805026 usec
+    Avg gRPC time: 680863 usec ((un)marshal request/response 4122 usec + response wait 676741 usec)
+  Server:
+    Inference count: 42300
+    Execution count: 423
+    Successful request count: 423
+    Avg request latency: 529341 usec (overhead 624 usec + queue 188891 usec + compute input 10268 usec + compute infer 329188 usec + compute output 370 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 586.667 infer/sec, latency 781951 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 354
+    Throughput: 590 infer/sec
+    p50 latency: 686069 usec
+    p90 latency: 757060 usec
+    p95 latency: 774319 usec
+    p99 latency: 798940 usec
+    Avg gRPC time: 675580 usec ((un)marshal request/response 4085 usec + response wait 671495 usec)
+  Server:
+    Inference count: 42600
+    Execution count: 426
+    Successful request count: 426
+    Avg request latency: 538615 usec (overhead 604 usec + queue 200942 usec + compute input 10776 usec + compute infer 326046 usec + compute output 247 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 590 infer/sec, latency 774319 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 349
+    Throughput: 581.667 infer/sec
+    p50 latency: 689949 usec
+    p90 latency: 764754 usec
+    p95 latency: 782443 usec
+    p99 latency: 810621 usec
+    Avg gRPC time: 686597 usec ((un)marshal request/response 4038 usec + response wait 682559 usec)
+  Server:
+    Inference count: 42000
+    Execution count: 420
+    Successful request count: 420
+    Avg request latency: 545628 usec (overhead 574 usec + queue 202403 usec + compute input 10955 usec + compute infer 331474 usec + compute output 222 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 581.667 infer/sec, latency 782443 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 353
+    Throughput: 588.333 infer/sec
+    p50 latency: 689200 usec
+    p90 latency: 739467 usec
+    p95 latency: 779554 usec
+    p99 latency: 805419 usec
+    Avg gRPC time: 681017 usec ((un)marshal request/response 4167 usec + response wait 676850 usec)
+  Server:
+    Inference count: 42300
+    Execution count: 423
+    Successful request count: 423
+    Avg request latency: 536754 usec (overhead 734 usec + queue 196817 usec + compute input 12034 usec + compute infer 326938 usec + compute output 231 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 588.333 infer/sec, latency 779554 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 351
+    Throughput: 585 infer/sec
+    p50 latency: 507918 usec
+    p90 latency: 592108 usec
+    p95 latency: 601449 usec
+    p99 latency: 653777 usec
+    Avg gRPC time: 514131 usec ((un)marshal request/response 4066 usec + response wait 510065 usec)
+  Server:
+    Inference count: 42000
+    Execution count: 420
+    Successful request count: 420
+    Avg request latency: 383156 usec (overhead 644 usec + queue 49865 usec + compute input 10340 usec + compute infer 322077 usec + compute output 230 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 585 infer/sec, latency 601449 usec
+tee: /depot/cms/users/green642/outputs/zerodatGed/PerfHamCli40CPUGedServ.txt: No such file or directory
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client:
+    Request count: 352
+    Throughput: 586.667 infer/sec
+    p50 latency: 688501 usec
+    p90 latency: 753199 usec
+    p95 latency: 777306 usec
+    p99 latency: 802970 usec
+    Avg gRPC time: 682235 usec ((un)marshal request/response 4031 usec + response wait 678204 usec)
+  Server:
+    Inference count: 42200
+    Execution count: 422
+    Successful request count: 422
+    Avg request latency: 529220 usec (overhead 1148 usec + queue 188478 usec + compute input 12327 usec + compute infer 327034 usec + compute output 233 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 586.667 infer/sec, latency 777306 usec

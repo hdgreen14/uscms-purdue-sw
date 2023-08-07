@@ -1,0 +1,260 @@
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 200
+    Throughput: 333.333 infer/sec
+    p50 latency: 1197036 usec
+    p90 latency: 1277909 usec
+    p95 latency: 1312950 usec
+    p99 latency: 1334943 usec
+    Avg gRPC time: 1195434 usec ((un)marshal request/response 4057 usec + response wait 1191377 usec)
+  Server: 
+    Inference count: 24100
+    Execution count: 241
+    Successful request count: 241
+    Avg request latency: 1128946 usec (overhead 136 usec + queue 830318 usec + compute input 10166 usec + compute infer 288230 usec + compute output 96 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 333.333 infer/sec, latency 1312950 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 190
+    Throughput: 316.667 infer/sec
+    p50 latency: 1261006 usec
+    p90 latency: 1337098 usec
+    p95 latency: 1353918 usec
+    p99 latency: 1389013 usec
+    Avg gRPC time: 1258963 usec ((un)marshal request/response 3893 usec + response wait 1255070 usec)
+  Server: 
+    Inference count: 22800
+    Execution count: 228
+    Successful request count: 228
+    Avg request latency: 1189649 usec (overhead 137 usec + queue 875020 usec + compute input 10572 usec + compute infer 303824 usec + compute output 96 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 316.667 infer/sec, latency 1353918 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 211
+    Throughput: 351.667 infer/sec
+    p50 latency: 1137995 usec
+    p90 latency: 1216961 usec
+    p95 latency: 1246957 usec
+    p99 latency: 1294973 usec
+    Avg gRPC time: 1138839 usec ((un)marshal request/response 4027 usec + response wait 1134812 usec)
+  Server: 
+    Inference count: 25300
+    Execution count: 253
+    Successful request count: 253
+    Avg request latency: 1070934 usec (overhead 167 usec + queue 786426 usec + compute input 10660 usec + compute infer 273585 usec + compute output 96 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 351.667 infer/sec, latency 1246957 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 203
+    Throughput: 338.333 infer/sec
+    p50 latency: 1182979 usec
+    p90 latency: 1256954 usec
+    p95 latency: 1271986 usec
+    p99 latency: 1304799 usec
+    Avg gRPC time: 1183897 usec ((un)marshal request/response 3913 usec + response wait 1179984 usec)
+  Server: 
+    Inference count: 24400
+    Execution count: 244
+    Successful request count: 244
+    Avg request latency: 1115364 usec (overhead 140 usec + queue 819973 usec + compute input 10263 usec + compute infer 284891 usec + compute output 97 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 338.333 infer/sec, latency 1271986 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 196
+    Throughput: 326.667 infer/sec
+    p50 latency: 1210909 usec
+    p90 latency: 1333926 usec
+    p95 latency: 1361984 usec
+    p99 latency: 1479991 usec
+    Avg gRPC time: 1220124 usec ((un)marshal request/response 3998 usec + response wait 1216126 usec)
+  Server: 
+    Inference count: 23600
+    Execution count: 236
+    Successful request count: 236
+    Avg request latency: 1150134 usec (overhead 146 usec + queue 845349 usec + compute input 10045 usec + compute infer 294481 usec + compute output 113 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 326.667 infer/sec, latency 1361984 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 193
+    Throughput: 321.667 infer/sec
+    p50 latency: 931886 usec
+    p90 latency: 1012994 usec
+    p95 latency: 1027743 usec
+    p99 latency: 1057964 usec
+    Avg gRPC time: 933252 usec ((un)marshal request/response 3831 usec + response wait 929421 usec)
+  Server: 
+    Inference count: 23200
+    Execution count: 232
+    Successful request count: 232
+    Avg request latency: 861164 usec (overhead 131 usec + queue 549993 usec + compute input 10638 usec + compute infer 300309 usec + compute output 93 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 321.667 infer/sec, latency 1027743 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 205
+    Throughput: 341.667 infer/sec
+    p50 latency: 1178926 usec
+    p90 latency: 1251911 usec
+    p95 latency: 1272091 usec
+    p99 latency: 1311975 usec
+    Avg gRPC time: 1179576 usec ((un)marshal request/response 4007 usec + response wait 1175569 usec)
+  Server: 
+    Inference count: 24400
+    Execution count: 244
+    Successful request count: 244
+    Avg request latency: 1109642 usec (overhead 136 usec + queue 815112 usec + compute input 10623 usec + compute infer 283674 usec + compute output 97 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 341.667 infer/sec, latency 1272091 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 211
+    Throughput: 351.667 infer/sec
+    p50 latency: 1125446 usec
+    p90 latency: 1230546 usec
+    p95 latency: 1254760 usec
+    p99 latency: 1270951 usec
+    Avg gRPC time: 1134582 usec ((un)marshal request/response 3970 usec + response wait 1130612 usec)
+  Server: 
+    Inference count: 25400
+    Execution count: 254
+    Successful request count: 254
+    Avg request latency: 1067777 usec (overhead 138 usec + queue 784249 usec + compute input 10452 usec + compute infer 272843 usec + compute output 95 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 351.667 infer/sec, latency 1254760 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 200
+    Throughput: 333.333 infer/sec
+    p50 latency: 1199825 usec
+    p90 latency: 1312749 usec
+    p95 latency: 1331642 usec
+    p99 latency: 1362837 usec
+    Avg gRPC time: 1195769 usec ((un)marshal request/response 3971 usec + response wait 1191798 usec)
+  Server: 
+    Inference count: 24100
+    Execution count: 241
+    Successful request count: 241
+    Avg request latency: 1126242 usec (overhead 136 usec + queue 827309 usec + compute input 10204 usec + compute infer 288498 usec + compute output 95 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 333.333 infer/sec, latency 1331642 usec
+*** Measurement Settings ***
+  Batch size: 100
+  Using "time_windows" mode for stabilization
+  Measurement window: 60000 msec
+  Latency limit: 0 msec
+  Concurrency limit: 4 concurrent requests
+  Using asynchronous calls for inference
+  Stabilizing using p95 latency
+
+Request concurrency: 4
+  Client: 
+    Request count: 204
+    Throughput: 340 infer/sec
+    p50 latency: 1170998 usec
+    p90 latency: 1255003 usec
+    p95 latency: 1272954 usec
+    p99 latency: 1304979 usec
+    Avg gRPC time: 1180916 usec ((un)marshal request/response 3849 usec + response wait 1177067 usec)
+  Server: 
+    Inference count: 24300
+    Execution count: 243
+    Successful request count: 243
+    Avg request latency: 1108058 usec (overhead 138 usec + queue 812720 usec + compute input 10308 usec + compute infer 284782 usec + compute output 110 usec)
+
+Inferences/Second vs. Client p95 Batch Latency
+Concurrency: 4, throughput: 340 infer/sec, latency 1272954 usec
